@@ -202,7 +202,7 @@ sub GrubFs {
                 # Based on the type pull in the identifier from the system
                 my ($status, @devInfo) = runCommand("@utillinux@/bin/blkid -o export @{[$fs->device]}");
                 if ($status != 0) {
-                    die "Failed to get blkid info (returned $status) for @{[$fs->mount]} on @{[$fs->device]}";
+                    die "Failed to get blkid info (returned $status) for @{[$fs->mount]} on @{[$fs->device]}, make sure to run 'wipefs -a @{[$fs->mount]}' and do reformat the @{[$fs->mount]}, check the ArchWiki about Partitioning for more info.";
                 }
                 my @matches = join("", @devInfo) =~ m/@{[uc $fsIdentifier]}=([^\n]*)/;
                 if ($#matches != 0) {
