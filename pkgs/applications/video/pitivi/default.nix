@@ -94,7 +94,7 @@ python3.pkgs.buildPythonApplication rec {
       that can appeal to newbies and professionals alike.
     '';
     license = licenses.lgpl21Plus;
-    maintainers = with maintainers; [];
+    maintainers = with maintainers; [AkechiShiro];
     platforms = platforms.linux;
   };
 }
