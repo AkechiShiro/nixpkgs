@@ -16,6 +16,7 @@
 , meson
 , ninja
 , gsettings-desktop-schemas
+, hicolor-icon-theme
 }:
 
 python3.pkgs.buildPythonApplication rec {
@@ -73,6 +74,13 @@ python3.pkgs.buildPythonApplication rec {
     matplotlib
     librosa
   ];
+
+  preFixup = ''
+    gappsWrapperArgs+=(
+      # The icon theme is hardcoded.
+      --prefix XDG_DATA_DIRS : "${hicolor-icon-theme}/share"
+    )
+  '';
 
   postPatch = ''
     patchShebangs ./getenvvar.py
