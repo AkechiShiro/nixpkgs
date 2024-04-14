@@ -2342,6 +2342,45 @@ with pkgs;
 
   uutils-coreutils-noprefix = uutils-coreutils.override { prefix = null; };
 
+  volctl = callPackage ../tools/audio/volctl { };
+
+  volk = if (stdenv.isDarwin && stdenv.isAarch64) then
+    (callPackage ../development/libraries/volk/2.5.0.nix { })
+  else
+    (callPackage ../development/libraries/volk { })
+  ;
+
+  vorta = qt6Packages.callPackage ../applications/backup/vorta { };
+
+  vowpal-wabbit = callPackage ../applications/science/machine-learning/vowpal-wabbit { };
+
+  vt-cli = callPackage ../tools/security/vt-cli { };
+
+  wakeonlan = callPackage ../tools/networking/wakeonlan { };
+
+  wallutils = callPackage ../tools/graphics/wallutils { };
+
+  wayback = callPackage ../tools/misc/wayback { };
+
+  wazuh = callPackage ../tools/security/wazuh { };
+
+  worker-build = callPackage ../development/tools/worker-build {
+    inherit (darwin.apple_sdk.frameworks) Security;
+  };
+
+  inherit (nodePackages) wrangler;
+
+  wrangler_1 = callPackage ../development/tools/wrangler_1 {
+    inherit (darwin.apple_sdk.frameworks) CoreFoundation CoreServices Security;
+  };
+
+  snowflake = callPackage ../tools/networking/snowflake { };
+
+  wsl-open = callPackage ../tools/misc/wsl-open { };
+
+  wsl-vpnkit = callPackage ../tools/networking/wsl-vpnkit { };
+
+
   xkcdpass = with python3Packages; toPythonApplication xkcdpass;
 
   zonemaster-cli = perlPackages.ZonemasterCLI;
