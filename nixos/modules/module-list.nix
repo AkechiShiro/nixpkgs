@@ -1527,6 +1527,7 @@
   ./services/security/warpgate.nix
   ./services/security/yubikey-agent.nix
   ./services/security/wazuh-agent.nix
+  ./services/security/wazuh/wazuh.nix
   ./services/security/yubikey-agent.nix
   ./services/system/automatic-timezoned.nix
   ./services/system/bpftune.nix
