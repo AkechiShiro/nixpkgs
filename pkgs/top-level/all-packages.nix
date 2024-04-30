@@ -2362,6 +2362,8 @@ with pkgs;
 
   wayback = callPackage ../tools/misc/wayback { };
 
+  wazuh = callPackage ../tools/security/wazuh { };
+
   worker-build = callPackage ../development/tools/worker-build {
     inherit (darwin.apple_sdk.frameworks) Security;
   };
