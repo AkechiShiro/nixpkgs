@@ -1089,6 +1089,16 @@ rec {
       urlPrefix = "https://snapshot.debian.org/archive/debian/20231124T031419Z";
       packages = commonDebianPackages;
     };
+    debian1208x86_64 = {
+      name = "debian-12.8-bookworm-amd64";
+      fullName = "Debian 12.8 Bookworm (amd64)";
+      packagesList = fetchurl {
+        url = "https://snapshot.debian.org/archive/debian/20241126T204039Z/dists/bookworm/main/binary-amd64/Packages.xz";
+        hash = "";
+      };
+      urlPrefix = "https://snapshot.debian.org/archive/debian/20241126T204039Z";
+      packages = commonDebianPackages;
+    };
   };
 
 
