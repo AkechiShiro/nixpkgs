@@ -1099,6 +1099,16 @@ rec {
       urlPrefix = "https://snapshot.debian.org/archive/debian/20241126T204039Z";
       packages = commonDebianPackages;
     };
+    debian12sidx86_64 = {
+      name = "debian-sid-amd64";
+      fullName = "Debian 13.0 Sid (amd64)";
+      packagesList = fetchurl {
+        url = "https://snapshot.debian.org/archive/debian/20241129T083024Z/dists/sid/main/binary-amd64/Packages.xz";
+        hash = "";
+      };
+      urlPrefix = "https://snapshot.debian.org/archive/debian/20241129T083024Z";
+      packages = commonDebianPackages;
+    };
   };
 
 
