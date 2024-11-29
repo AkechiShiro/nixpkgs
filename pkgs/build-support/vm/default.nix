@@ -1104,7 +1104,7 @@ rec {
       fullName = "Debian 13.0 Sid (amd64)";
       packagesList = fetchurl {
         url = "https://snapshot.debian.org/archive/debian/20241129T083024Z/dists/sid/main/binary-amd64/Packages.xz";
-        hash = "";
+        hash = "sha256-r5hPwTUpWQQqae9LcpV9S8/HG9lyz8TLxUGZlW04IYI=";
       };
       urlPrefix = "https://snapshot.debian.org/archive/debian/20241129T083024Z";
       packages = commonDebianPackages;
