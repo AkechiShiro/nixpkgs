@@ -1093,10 +1093,10 @@ rec {
       name = "debian-12.8-bookworm-amd64";
       fullName = "Debian 12.8 Bookworm (amd64)";
       packagesList = fetchurl {
-        url = "https://snapshot.debian.org/archive/debian/20241126T204039Z/dists/bookworm/main/binary-amd64/Packages.xz";
-        hash = "sha256-y4OS1+i6MUoEYz5/7TP/UU72EZ3aWvS9ulzLIdcWVMQ=";
+        url = "https://snapshot.debian.org/archive/debian/20250107T085457Z/dists/bookworm/main/binary-amd64/Packages.xz";
+        hash = "";
       };
-      urlPrefix = "https://snapshot.debian.org/archive/debian/20241126T204039Z";
+      urlPrefix = "https://snapshot.debian.org/archive/debian/20250107T085457Z";
       packages = commonDebianPackages;
     };
     debian12sidx86_64 = {
