@@ -592,14 +592,14 @@ rec {
 
   fillDiskWithDebs =
     { size ? 4096, debs, name, fullName, postInstall ? null, createRootFS ? defaultCreateRootFS
-    , QEMU_OPTS ? "", memSize ? 512, destination ? "/var/tmp/", ... }@args:
+    , QEMU_OPTS ? "", memSize ? 512, ... }@args:
 
     runInLinuxVM (stdenv.mkDerivation ({
-      inherit name postInstall QEMU_OPTS memSize destination;
+      inherit name postInstall QEMU_OPTS memSize;
 
       debs = (lib.intersperse "|" debs);
 
-      preVM = createEmptyImage {inherit size fullName destination;};
+      preVM = createEmptyImage {inherit size fullName;};
 
       buildCommand = ''
         ${createRootFS}
