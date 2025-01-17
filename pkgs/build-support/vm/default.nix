@@ -1101,12 +1101,12 @@ rec {
     };
     debian12sidx86_64 = {
       name = "debian-sid-amd64";
-      fullName = "Debian 13.0 Sid (amd64)";
+      fullName = "Debian unstable Sid (amd64)";
       packagesList = fetchurl {
-        url = "https://snapshot.debian.org/archive/debian/20241129T083024Z/dists/sid/main/binary-amd64/Packages.xz";
-        hash = "sha256-r5hPwTUpWQQqae9LcpV9S8/HG9lyz8TLxUGZlW04IYI=";
+        url = "https://snapshot.debian.org/archive/debian/20250117T205717Z/dists/sid/main/binary-amd64/Packages.xz";
+        hash = "";
       };
-      urlPrefix = "https://snapshot.debian.org/archive/debian/20241129T083024Z";
+      urlPrefix = "https://snapshot.debian.org/archive/debian/20250117T205717Z";
       packages = commonDebianPackages;
     };
   };
