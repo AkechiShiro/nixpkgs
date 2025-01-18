@@ -18,7 +18,7 @@ while (1) {
     my $cdata = Dpkg::Control->new(type => CTRL_INFO_PKG);
     last if not $cdata->parse(\*PACKAGES, $packagesFile);
     die unless defined $cdata->{Package};
-    print STDERR $cdata->{Package}, "\n";
+    #print STDERR $cdata->{Package}, "\n";
     $packages{$cdata->{Package}} = $cdata;
 }
 
