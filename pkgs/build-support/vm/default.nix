@@ -1117,7 +1117,7 @@ rec {
         url = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dists/kali-rolling/main/binary-amd64/Packages.gz";
         hash = "sha256-a28w3ncRgGf2316gnni0lqDDpHPvjU/EtGjirjAYIBE=";
       };
-      urlPrefix = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dists/kali-rolling/main/binary-amd64/Packages.gz";
+      urlPrefix = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali";
       packages = commonDebianPackages;
     };
   };
