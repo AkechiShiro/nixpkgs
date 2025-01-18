@@ -1114,10 +1114,10 @@ rec {
       name = "kali-linux-rolling";
       fullName = "Kali Linux Rolling (amd64)";
       packagesList = fetchurl {
-        url = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dist/kali-rolling/main/binary-amd64/Packages.gz";
+        url = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dists/kali-rolling/main/binary-amd64/Packages.gz";
         hash = "";
       };
-      urlPrefix = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dist/kali-rolling/main/binary-amd64/Packages.gz";
+      urlPrefix = "http://127.0.0.1:8000/http.kali.org/mirror/http.kali.org/kali/dists/kali-rolling/main/binary-amd64/Packages.gz";
       packages = commonDebianPackages;
     };
   };
