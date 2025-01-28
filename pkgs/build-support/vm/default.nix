@@ -1110,12 +1110,23 @@ rec {
       packages = commonDebianPackages;
     };
 
-    kalilinuxRollingx86_64 = {
+    kalirolling_19january_snapshot_x86_64 = {
+      name = "kali-linux-rolling";
+      fullName = "Kali Linux Rolling (amd64)";
+      packagesList = fetchurl {
+        url = "http://127.0.0.1:8000/kali/dists/kali-rolling/main/binary-amd64/Packages.gz";
+        hash = "sha256-a28w3ncRgGf2316gnni0lqDDpHPvjU/EtGjirjAYIBE=";
+      };
+      urlPrefix = "http://127.0.0.1:8000/";
+      packages = commonDebianPackages;
+    };
+
+    kalirolling_upstream_x86_64 = {
       name = "kali-linux-rolling";
       fullName = "Kali Linux Rolling (amd64)";
       packagesList = fetchurl {
         url = "http://http.kali.org/dists/kali-rolling/main/binary-amd64/Packages.gz";
-        hash = "sha256-a28w3ncRgGf2316gnni0lqDDpHPvjU/EtGjirjAYIBE=";
+        hash = "sha256-uNH50wvkOYX/FyV7hcFa83A1BsPVC4JldX+wYdzxSVg=";
       };
       urlPrefix = "http://http.kali.org/";
       packages = commonDebianPackages;
