@@ -1103,10 +1103,10 @@ rec {
       name = "debian-sid-amd64";
       fullName = "Debian unstable Sid (amd64)";
       packagesList = fetchurl {
-        url = "https://snapshot.debian.org/archive/debian/20250117T205717Z/dists/sid/main/binary-amd64/Packages.xz";
-        hash = "sha256-kUvtaQs0FrSDVyrgXI6rkO4vFZIjL91lFtSiKHtu90Q=";
+        url = "https://snapshot.debian.org/archive/debian/20250129T203412Z/dists/sid/main/binary-amd64/Packages.xz";
+        hash = "sha256-qbKIiPKUqx0qKHILc1z8DSXuKfWk72fqOfXHh0mR5ws=";
       };
-      urlPrefix = "https://snapshot.debian.org/archive/debian/20250117T205717Z";
+      urlPrefix = "https://snapshot.debian.org/archive/debian/20250129T203412Z";
       packages = commonDebianPackages;
     };
 
