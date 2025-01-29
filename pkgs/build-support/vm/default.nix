@@ -1104,7 +1104,7 @@ rec {
       fullName = "Debian unstable Sid (amd64)";
       packagesList = fetchurl {
         url = "https://snapshot.debian.org/archive/debian/20250129T203412Z/dists/sid/main/binary-amd64/Packages.xz";
-        hash = "sha256-qbKIiPKUqx0qKHILc1z8DSXuKfWk72fqOfXHh0mR5ws=";
+        hash = "sha256-1vMVoM7unBFZE1aA9M/rLROxGWrQ0chiLNFx4PCmjcg=";
       };
       urlPrefix = "https://snapshot.debian.org/archive/debian/20250129T203412Z";
       packages = commonDebianPackages;
