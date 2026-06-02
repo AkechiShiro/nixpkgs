@@ -364,7 +364,7 @@ in
       rstudio-server = 324;
       localtimed = 325;
       automatic-timezoned = 326;
-      wazuh = 327; # TODO(AkechiShiro) : 328 or keep 327 ??
+      wazuh = 328; # Was 327 but was WIP, reintroduced as 328 (clock was merged upstream and took 327)
 
       # When adding a uid, make sure it doesn't match an existing gid.
       #
